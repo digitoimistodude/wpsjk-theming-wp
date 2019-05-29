@@ -1,0 +1,46 @@
+// Typography settings
+// Dude.fi specific
+:root {
+  font-size: 62.5%;
+}
+
+// Source: https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss
+// Example usage: @include fontFace('Proxima Nova','../fonts/proximanova-regular', 400);
+@mixin fontFace($family, $src, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+      url('#{$src}.woff2') format('woff2'),
+      url('#{$src}.woff') format('woff'), // standards
+      url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+      url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@include fontFace('FuturaStd', '../fonts/FuturaStd-Light', 300);
+@include fontFace('FuturaStd', '../fonts/FuturaStd-Book', 400);
+@include fontFace('FuturaStd', '../fonts/FuturaStd-Medium', 500);
+@include fontFace('FuturaStd', '../fonts/FuturaStd-Bold', 700);
+@include fontFace('FuturaStd', '../fonts/FuturaStd-Heavy', 600);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_0_0', 300);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_2_0', 400);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_3_0', 700);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_1_0', 900);
+@include fontFace('Poppins', '../fonts/poppins-light', 200);
+@include fontFace('Poppins', '../fonts/poppins-regular', 400);
+@include fontFace('Poppins', '../fonts/poppins-medium', 500);
+@include fontFace('Poppins', '../fonts/poppins-semibold', 600);
+@include fontFace('Poppins', '../fonts/poppins-bold', 700);
+@include fontFace('Gotham', '../fonts/gotham-bold', 700);
+@include fontFace('Gotham', '../fonts/gotham-black', 900);
+@include fontFace('Sofia Pro', '../fonts/sofiaprolight', 200);
+@include fontFace('Sofia Pro', '../fonts/sofiaproregular', 400);
+@include fontFace('Sofia Pro', '../fonts/sofiaprobold', 700);
+@include fontFace('Rubik', '../fonts/rubik-regular', 400);
+@include fontFace('Rubik', '../fonts/rubik-medium', 500);
+@include fontFace('Rubik', '../fonts/rubik-bold', 700);
+@include fontFace('Rubik', '../fonts/rubik-black', 900);

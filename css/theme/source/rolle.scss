@@ -1,0 +1,274 @@
+//
+// A theme for reveal.js presentations used by Finnish web design agency, Digitoimisto Dude Oy.
+// Applies to dude.fi style guidelines.
+//
+// This theme is Copyright (C) 2012 Roni Laukkarinen, https://github.com/ronilaukkarinen. It is MIT licensed.
+// reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+//
+
+// Default mixins and settings -----------------
+@import '../template/mixins';
+@import '../template/settings';
+@import '../template/typography';
+// ---------------------------------------------
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Sofia Pro', 'Helvetica Neue', Helvetica, sans-serif;
+$headingFont: 'Poppins', 'Helvetica Neue', Helvetica, sans-serif;
+$mainColor: #dee0e1;
+$headingColor: #fff;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #16202a;
+$linkColor: #fff;
+$linkColorHover: #606c76;
+$selectionBackgroundColor: rgba(0, 0, 0, .99);
+$heading1Size: 6.8rem;
+$heading2Size: 4.8rem;
+$heading3Size: 3.4rem;
+$heading4Size: 2.4rem;
+$headingTextTransform: none;
+$headingFontWeight: 700;
+$mainFontSize: 30px;
+
+// Theme template ------------------------------
+@import '../template/theme';
+// ---------------------------------------------
+
+// Dimmed bg style hack
+html.dimbg {
+  .reveal .slide-background {
+    opacity: .3;
+  }
+}
+
+// Overrides
+.reveal {
+  .progress {
+    height: 10px;
+    background: transparent;
+
+    span {
+      background: lighten(#223243, 10%);
+    }
+  }
+
+  li.keys-li {
+    margin-top: -3.2rem;
+  }
+
+  .keys {
+    position: relative;
+    width: 106px;
+    height: 60px;
+    display: inline-block;
+    top: 20px;
+
+    kbd {
+      font-size: 1.5rem;
+      position: absolute;
+    }
+
+    .left {
+      bottom: 0;
+      left: 0;
+    }
+
+    .up {
+      top: 0;
+      left: 35px;
+    }
+
+    .right {
+      right: 0;
+      bottom: 0;
+    }
+
+    .down {
+      left: 35px;
+      bottom: 0;
+    }
+  }
+
+  .video-container {
+    background: transparent;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    video {
+      position: absolute;
+      object-fit: cover;
+      height: 100%;
+      width: 100vw;
+
+      // Vertical and Horizontal center
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  ul,
+  li {
+    line-height: 1.77;
+  }
+
+  pre,
+  code {
+    box-shadow: none;
+
+    mark {
+      background: #fffbdd;
+
+      .hljs,
+      .hljs-tag,
+      .hljs-subst,
+      .hljs-string,
+      .hljs-type,
+      .hljs-built_in,
+      .hljs-builtin-name,
+      .hljs-selector-id,
+      .hljs-selector-attr,
+      .hljs-selector-pseudo,
+      .hljs-addition,
+      .hljs-variable,
+      .hljs-template-variable {
+        color: #2e3138;
+      }
+    }
+  }
+
+  code {
+    &.hljs {
+      border-radius: 4px;
+      padding: 2rem;
+    }
+  }
+
+  section {
+    img {
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+
+      &:hover {
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+
+    a {
+      background: transparent;
+
+      &.link {
+        text-shadow: 1px 1px 0 #16202a, -1px 1px 0 #16202a, 2px 0 0 #16202a, -2px 0 0 #16202a;
+        box-shadow: inset 0 -1px 0 0 #16202a, inset 0 -2px 0 0 rgba(#fff, .2);
+        transition: all .55s;
+
+        &:hover {
+          color: #fff;
+          box-shadow: inset 0 -1px 0 0 rgba(#fff, .2), inset 0 -6px 0 0 rgba(#fff, .2);
+        }
+      }
+    }
+
+    kbd {
+      display: inline-block;
+      border: 1px solid lighten(#16202b, 7%);
+      border-radius: 4px;
+      padding: 0 .5em;
+      margin: 0 .2em;
+      box-shadow: 0 1px 0 rgba(#fff, .2), 0 0 0 2px lighten(#16202b, 7%) inset;
+      background-color: lighten(#16202b, 7%);
+      color: #fff;
+    }
+  }
+
+  .slides {
+    text-align: center;
+
+    h1 {
+      color: #fff;
+    }
+  }
+
+  p {
+    font-weight: 500;
+  }
+
+  .cover {
+    small {
+      opacity: .3;
+    }
+  }
+
+  .end {
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+section.video-section {
+  width: 100%;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+
+.reveal .hashtag h4 {
+  margin: 0;
+}
+
+.hashtag a {
+  opacity: .3;
+  color: #fff;
+
+  &:hover {
+    opacity: 1;
+    color: #fff;
+  }
+}
+
+.reveal .pause-overlay {
+  background: #111;
+  z-index: 999999999;
+}
+
+.boxes.boxes-two {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.reveal .boxes.boxes-two .box {
+  width: 40%;
+  background: #2c3d4e;
+  padding: 5rem;
+  text-align: left;
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  ul li {
+    font-size: 2.2rem;
+  }
+
+  &:nth-child(1) {
+    margin-right: 4rem;
+  }
+
+  ul,
+  li {
+    line-height: 1.55;
+  }
+}
