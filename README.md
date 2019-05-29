@@ -10,4 +10,4 @@ Original subject on the Meetup page: [Räätälöity WordPress-teemakehitys — 
 
 Slides powerede by [reveal.js](Räätälöity WordPress-teemakehitys — Näin rakennat teeman aloitusteemasta). The talk is in Finnish and the actual live slides can be found at [slides.dude.fi/wpsjk-theming-wp/](https://slides.dude.fi/wpsjk-theming-wp/).
 
-# [View slides](https://slides.dude.fiwpsjk-theming-wp/)
+# [View slides](https://slides.dude.fi/wpsjk-theming-wp/)
